@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'core/router/app_router.dart';
+import 'core/theme/app_theme.dart';
 
 void main() {
   runApp(const ProviderScope(child: ZipmartApp()));
@@ -16,7 +17,7 @@ class ZipmartApp extends ConsumerWidget {
 
     return MaterialApp.router(
       title: 'Zipmart',
-      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
+      theme: appTheme,
       routerConfig: router,
     );
   }
